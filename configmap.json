@@ -1,0 +1,308 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "data": {
+                "jws-kubeconfig-96771a": "eyJhbGciOiJIUzI1NiIsImtpZCI6Ijk2NzcxYSJ9..4McBJOrtx23RzW2V-uECts3qb5e_zwhMKOd90MRkU4c",
+                "kubeconfig": "apiVersion: v1\nclusters:\n- cluster:\n    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5RENDQWJDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJeE1ERXhOVEExTURBMU5Wb1hEVE14TURFeE16QTFNREExTlZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTkVZCnY2WnRYWXdESW1JVjBFYlRKd3JqRHJxNEp3Z3BhUWJNZ05OYUQ4Wm1VV3dvOUFsUUU4MXl0MVhCUlhPVU1YNFoKbXdvSmJHSWpjQ3V0em5HeFYvUUxkTG9iMU1uMmZCOFFyMlJpVzZRcGFDcXMxdjh6Qk1tVzdjekpOWmw1dnZLMwpaQ0M1bG8xVVh0ZXc5MU1hMkZTSGVieW9BQ3BqeXp2aktqZzkvNy9rZXB5Q0M4cExhWlIrMnpaMnY0Sm1LVDZKClAwMnZOZXFXUE90WExRVmRaeHVhd3Npd2VHQ3pnWU5nQjVMNHMrYjd5a2NybFJ3K01zWXVzY3RjYTBHclVtQ3MKSUlzczNCUktuMXZiZ2hVLzZZVHJlUzByWHlhTUFYL1ZFVi9vc3E1VjhKYW95UGl4bzNUQWI0MkZHWW1ScWN0KwpMV245UzhqT2hiMHZFRWtpTHcwQ0F3RUFBYU1qTUNFd0RnWURWUjBQQVFIL0JBUURBZ0trTUE4R0ExVWRFd0VCCi93UUZNQU1CQWY4d0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFLaUJibEdYYlZycFI4RzRYTUlzcnNwcHJyV0UKczJWWjhMQ3EwU2tDYzBHbzdXTzBJUmJvNTdQUVFBd05zNFRjWEdlUVJxS1VGaFBRRUhOWXd1dEtmemxGRDErUQo2K00vS0lhWktjcjVSYmZERkYrTzlnTWlrMFRJKzlZald4elRzY3M2N0MycGM1R2NwYWVFbmloMjNyVU5ReXFaClErSmZHSEgzSmZzdkI5aE5JeE44WGQvMUx0ejNzdEVoRnhUR1NPYS9nT2gvZTkvMkZUZnlnZXRHT21pZG0rVXcKV3pVYWhSQTdQTUlBY0NCQ3JrQURndEQ2bDF5RDZNczdUZm54a2lIcDZ4ZFlZWGxMSWNPWGUyWVJhSmFZSkFwNApaellWbTJiSlhPMTJpNExYOE9xOVcrYnhrQlk3aWtUNmJEeUNPMUdmK1JRV09temdObUNUVFJqczZTUT0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=\n    server: https://172.17.0.18:6443\n  name: \"\"\ncontexts: null\ncurrent-context: \"\"\nkind: Config\npreferences: {}\nusers: null\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2021-01-15T05:01:23Z",
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:kubeconfig": {}
+                            }
+                        },
+                        "manager": "kubeadm",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:23Z"
+                    },
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                "f:jws-kubeconfig-96771a": {}
+                            }
+                        },
+                        "manager": "kube-controller-manager",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:40Z"
+                    }
+                ],
+                "name": "cluster-info",
+                "namespace": "kube-public",
+                "resourceVersion": "368",
+                "selfLink": "/api/v1/namespaces/kube-public/configmaps/cluster-info",
+                "uid": "65468b0f-5794-4c15-a0e2-6ed0d32c0845"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "Corefile": ".:53 {\n    errors\n    health {\n       lameduck 5s\n    }\n    ready\n    kubernetes cluster.local in-addr.arpa ip6.arpa {\n       pods insecure\n       fallthrough in-addr.arpa ip6.arpa\n       ttl 30\n    }\n    prometheus :9153\n    forward . /etc/resolv.conf\n    cache 30\n    loop\n    reload\n    loadbalance\n}\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2021-01-15T05:01:23Z",
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:Corefile": {}
+                            }
+                        },
+                        "manager": "kubeadm",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:23Z"
+                    }
+                ],
+                "name": "coredns",
+                "namespace": "kube-system",
+                "resourceVersion": "187",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/coredns",
+                "uid": "8cbce392-1c32-49b7-ab32-91d187e5fc55"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "client-ca-file": "-----BEGIN CERTIFICATE-----\nMIICyDCCAbCgAwIBAgIBADANBgkqhkiG9w0BAQsFADAVMRMwEQYDVQQDEwprdWJl\ncm5ldGVzMB4XDTIxMDExNTA1MDA1NVoXDTMxMDExMzA1MDA1NVowFTETMBEGA1UE\nAxMKa3ViZXJuZXRlczCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBANEY\nv6ZtXYwDImIV0EbTJwrjDrq4JwgpaQbMgNNaD8ZmUWwo9AlQE81yt1XBRXOUMX4Z\nmwoJbGIjcCutznGxV/QLdLob1Mn2fB8Qr2RiW6QpaCqs1v8zBMmW7czJNZl5vvK3\nZCC5lo1UXtew91Ma2FSHebyoACpjyzvjKjg9/7/kepyCC8pLaZR+2zZ2v4JmKT6J\nP02vNeqWPOtXLQVdZxuawsiweGCzgYNgB5L4s+b7ykcrlRw+MsYusctca0GrUmCs\nIIss3BRKn1vbghU/6YTreS0rXyaMAX/VEV/osq5V8JaoyPixo3TAb42FGYmRqct+\nLWn9S8jOhb0vEEkiLw0CAwEAAaMjMCEwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB\n/wQFMAMBAf8wDQYJKoZIhvcNAQELBQADggEBAKiBblGXbVrpR8G4XMIsrspprrWE\ns2VZ8LCq0SkCc0Go7WO0IRbo57PQQAwNs4TcXGeQRqKUFhPQEHNYwutKfzlFD1+Q\n6+M/KIaZKcr5RbfDFF+O9gMik0TI+9YjWxzTscs67C2pc5GcpaeEnih23rUNQyqZ\nQ+JfGHH3JfsvB9hNIxN8Xd/1Ltz3stEhFxTGSOa/gOh/e9/2FTfygetGOmidm+Uw\nWzUahRA7PMIAcCBCrkADgtD6l1yD6Ms7TfnxkiHp6xdYYXlLIcOXe2YRaJaYJAp4\nZzYVm2bJXO12i4LX8Oq9W+bxkBY7ikT6bDyCO1Gf+RQWOmzgNmCTTRjs6SQ=\n-----END CERTIFICATE-----\n",
+                "requestheader-allowed-names": "[\"front-proxy-client\"]",
+                "requestheader-client-ca-file": "-----BEGIN CERTIFICATE-----\nMIIC0DCCAbigAwIBAgIBADANBgkqhkiG9w0BAQsFADAZMRcwFQYDVQQDEw5mcm9u\ndC1wcm94eS1jYTAeFw0yMTAxMTUwNTAwNTZaFw0zMTAxMTMwNTAwNTZaMBkxFzAV\nBgNVBAMTDmZyb250LXByb3h5LWNhMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB\nCgKCAQEArlIca3v/qLbmIWsvx7TfDSaqNtENuEjVbi9L+ni65mHKMdvL20aD97eK\ngrCPD+1ekz8tLDsk88iJTUPnHmFNxxGSCj38l75pjpwJpPXpryl7FRczvL/jSpi/\nP5pl1vEL1xEaQAM/VTtT355CoEkp8iIEW787Ha00p00q9wkwXtZbZrZ0UH/o+0c8\nCXYPRXvsxlP8b7SjxlqRrJRS/xetgYyuprBf741Ruc/pn6jK+ttAyI8YrqNsyWlV\nylvNPIySq5wx83CfJ1vtCO/dIM1jh3JR8dDQa+D7456//FuFuw3Tl5R7db790AbR\nr44oQiTMLfJYUcU0xMgPsOlbYCMdKQIDAQABoyMwITAOBgNVHQ8BAf8EBAMCAqQw\nDwYDVR0TAQH/BAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEACGm/RRVdBJS3PYW4\nifS96gXitQbCjvLWYqMdWekvG8+7DZKN27rRQfJV4qwHHZielx0Dp8WAbpOHsCVt\nrIojMBIXCW7Dnmw/aYMqXVmIqk6WBm8EIoBtLU8xJeGW46PySc+dJxtWJVliBmyY\nhD2mS46xLRFj5Zezjg0Rokky1jls7I6TZNvcENr1su5ZDVwwKGIT1LMSGeydYZAm\ngRwhK6ueScmgI82gGFi3ou5PZsoTG6LVSYEMEy4vOSu0QtlK+h2xEsGfMrTr6vrL\nGUN6E8XsiwkaDmwejo+I/N6E9PqtGmtP9k1CvIuODlbBN9kip2oUnXC/2zgXtsW2\n1YWfew==\n-----END CERTIFICATE-----\n",
+                "requestheader-extra-headers-prefix": "[\"X-Remote-Extra-\"]",
+                "requestheader-group-headers": "[\"X-Remote-Group\"]",
+                "requestheader-username-headers": "[\"X-Remote-User\"]"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2021-01-15T05:01:20Z",
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:client-ca-file": {},
+                                "f:requestheader-allowed-names": {},
+                                "f:requestheader-client-ca-file": {},
+                                "f:requestheader-extra-headers-prefix": {},
+                                "f:requestheader-group-headers": {},
+                                "f:requestheader-username-headers": {}
+                            }
+                        },
+                        "manager": "kube-apiserver",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:20Z"
+                    }
+                ],
+                "name": "extension-apiserver-authentication",
+                "namespace": "kube-system",
+                "resourceVersion": "16",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/extension-apiserver-authentication",
+                "uid": "90404726-b226-4380-8caa-bad138342734"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "cni-conf.json": "{\n  \"name\": \"cbr0\",\n  \"cniVersion\": \"0.3.1\",\n  \"plugins\": [\n    {\n      \"type\": \"flannel\",\n      \"delegate\": {\n        \"hairpinMode\": true,\n        \"isDefaultGateway\": true\n      }\n    },\n    {\n      \"type\": \"portmap\",\n      \"capabilities\": {\n        \"portMappings\": true\n      }\n    }\n  ]\n}\n",
+                "net-conf.json": "{\n  \"Network\": \"10.244.0.0/16\",\n  \"Backend\": {\n    \"Type\": \"host-gw\"\n  }\n}\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"data\":{\"cni-conf.json\":\"{\\n  \\\"name\\\": \\\"cbr0\\\",\\n  \\\"cniVersion\\\": \\\"0.3.1\\\",\\n  \\\"plugins\\\": [\\n    {\\n      \\\"type\\\": \\\"flannel\\\",\\n      \\\"delegate\\\": {\\n        \\\"hairpinMode\\\": true,\\n        \\\"isDefaultGateway\\\": true\\n      }\\n    },\\n    {\\n      \\\"type\\\": \\\"portmap\\\",\\n      \\\"capabilities\\\": {\\n        \\\"portMappings\\\": true\\n      }\\n    }\\n  ]\\n}\\n\",\"net-conf.json\":\"{\\n  \\\"Network\\\": \\\"10.244.0.0/16\\\",\\n  \\\"Backend\\\": {\\n    \\\"Type\\\": \\\"host-gw\\\"\\n  }\\n}\\n\"},\"kind\":\"ConfigMap\",\"metadata\":{\"annotations\":{},\"labels\":{\"app\":\"flannel\",\"tier\":\"node\"},\"name\":\"kube-flannel-cfg\",\"namespace\":\"kube-system\"}}\n"
+                },
+                "creationTimestamp": "2021-01-15T05:01:24Z",
+                "labels": {
+                    "app": "flannel",
+                    "tier": "node"
+                },
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:cni-conf.json": {},
+                                "f:net-conf.json": {}
+                            },
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                },
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {},
+                                    "f:tier": {}
+                                }
+                            }
+                        },
+                        "manager": "kubectl",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:24Z"
+                    }
+                ],
+                "name": "kube-flannel-cfg",
+                "namespace": "kube-system",
+                "resourceVersion": "208",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/kube-flannel-cfg",
+                "uid": "e22681de-682d-49f7-a817-0c2961c99674"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "config.conf": "apiVersion: kubeproxy.config.k8s.io/v1alpha1\nbindAddress: 0.0.0.0\nclientConnection:\n  acceptContentTypes: \"\"\n  burst: 0\n  contentType: \"\"\n  kubeconfig: /var/lib/kube-proxy/kubeconfig.conf\n  qps: 0\nclusterCIDR: 10.244.0.0/16\nconfigSyncPeriod: 0s\nconntrack:\n  maxPerCore: null\n  min: null\n  tcpCloseWaitTimeout: null\n  tcpEstablishedTimeout: null\ndetectLocalMode: \"\"\nenableProfiling: false\nhealthzBindAddress: \"\"\nhostnameOverride: \"\"\niptables:\n  masqueradeAll: false\n  masqueradeBit: null\n  minSyncPeriod: 0s\n  syncPeriod: 0s\nipvs:\n  excludeCIDRs: null\n  minSyncPeriod: 0s\n  scheduler: \"\"\n  strictARP: false\n  syncPeriod: 0s\n  tcpFinTimeout: 0s\n  tcpTimeout: 0s\n  udpTimeout: 0s\nkind: KubeProxyConfiguration\nmetricsBindAddress: \"\"\nmode: \"\"\nnodePortAddresses: null\noomScoreAdj: null\nportRange: \"\"\nshowHiddenMetricsForVersion: \"\"\nudpIdleTimeout: 0s\nwinkernel:\n  enableDSR: false\n  networkName: \"\"\n  sourceVip: \"\"",
+                "kubeconfig.conf": "apiVersion: v1\nkind: Config\nclusters:\n- cluster:\n    certificate-authority: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt\n    server: https://172.17.0.18:6443\n  name: default\ncontexts:\n- context:\n    cluster: default\n    namespace: default\n    user: default\n  name: default\ncurrent-context: default\nusers:\n- name: default\n  user:\n    tokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2021-01-15T05:01:23Z",
+                "labels": {
+                    "app": "kube-proxy"
+                },
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:config.conf": {},
+                                "f:kubeconfig.conf": {}
+                            },
+                            "f:metadata": {
+                                "f:labels": {
+                                    ".": {},
+                                    "f:app": {}
+                                }
+                            }
+                        },
+                        "manager": "kubeadm",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:23Z"
+                    }
+                ],
+                "name": "kube-proxy",
+                "namespace": "kube-system",
+                "resourceVersion": "195",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/kube-proxy",
+                "uid": "d115fbfa-cff8-4ec5-b9d9-374ef054fc67"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "ClusterConfiguration": "apiServer:\n  extraArgs:\n    authorization-mode: Node,RBAC\n  timeoutForControlPlane: 4m0s\napiVersion: kubeadm.k8s.io/v1beta2\ncertificatesDir: /etc/kubernetes/pki\nclusterName: kubernetes\ncontrollerManager: {}\ndns:\n  type: CoreDNS\netcd:\n  local:\n    dataDir: /var/lib/etcd\nimageRepository: k8s.gcr.io\nkind: ClusterConfiguration\nkubernetesVersion: v1.18.0\nnetworking:\n  dnsDomain: cluster.local\n  podSubnet: 10.244.0.0/16\n  serviceSubnet: 10.96.0.0/12\nscheduler: {}\n",
+                "ClusterStatus": "apiEndpoints:\n  controlplane:\n    advertiseAddress: 172.17.0.18\n    bindPort: 6443\napiVersion: kubeadm.k8s.io/v1beta2\nkind: ClusterStatus\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2021-01-15T05:01:22Z",
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:ClusterConfiguration": {},
+                                "f:ClusterStatus": {}
+                            }
+                        },
+                        "manager": "kubeadm",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:22Z"
+                    }
+                ],
+                "name": "kubeadm-config",
+                "namespace": "kube-system",
+                "resourceVersion": "159",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/kubeadm-config",
+                "uid": "503fec73-5570-4fa7-8a82-d96f1bbdff51"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "data": {
+                "kubelet": "apiVersion: kubelet.config.k8s.io/v1beta1\nauthentication:\n  anonymous:\n    enabled: false\n  webhook:\n    cacheTTL: 0s\n    enabled: true\n  x509:\n    clientCAFile: /etc/kubernetes/pki/ca.crt\nauthorization:\n  mode: Webhook\n  webhook:\n    cacheAuthorizedTTL: 0s\n    cacheUnauthorizedTTL: 0s\nclusterDNS:\n- 10.96.0.10\nclusterDomain: cluster.local\ncpuManagerReconcilePeriod: 0s\nevictionPressureTransitionPeriod: 0s\nfileCheckFrequency: 0s\nhealthzBindAddress: 127.0.0.1\nhealthzPort: 10248\nhttpCheckFrequency: 0s\nimageMinimumGCAge: 0s\nkind: KubeletConfiguration\nnodeStatusReportFrequency: 0s\nnodeStatusUpdateFrequency: 0s\nrotateCertificates: true\nruntimeRequestTimeout: 0s\nstaticPodPath: /etc/kubernetes/manifests\nstreamingConnectionIdleTimeout: 0s\nsyncFrequency: 0s\nvolumeStatsAggPeriod: 0s\n"
+            },
+            "kind": "ConfigMap",
+            "metadata": {
+                "creationTimestamp": "2021-01-15T05:01:22Z",
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:data": {
+                                ".": {},
+                                "f:kubelet": {}
+                            }
+                        },
+                        "manager": "kubeadm",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:22Z"
+                    }
+                ],
+                "name": "kubelet-config-1.18",
+                "namespace": "kube-system",
+                "resourceVersion": "162",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/kubelet-config-1.18",
+                "uid": "bdd02c82-95d5-49cc-9e3f-c3e750342748"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "ConfigMap",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"data\":null,\"kind\":\"ConfigMap\",\"metadata\":{\"annotations\":{},\"name\":\"vip-configmap\",\"namespace\":\"kube-system\"}}\n"
+                },
+                "creationTimestamp": "2021-01-15T05:01:25Z",
+                "managedFields": [
+                    {
+                        "apiVersion": "v1",
+                        "fieldsType": "FieldsV1",
+                        "fieldsV1": {
+                            "f:metadata": {
+                                "f:annotations": {
+                                    ".": {},
+                                    "f:kubectl.kubernetes.io/last-applied-configuration": {}
+                                }
+                            }
+                        },
+                        "manager": "kubectl",
+                        "operation": "Update",
+                        "time": "2021-01-15T05:01:25Z"
+                    }
+                ],
+                "name": "vip-configmap",
+                "namespace": "kube-system",
+                "resourceVersion": "218",
+                "selfLink": "/api/v1/namespaces/kube-system/configmaps/vip-configmap",
+                "uid": "2f1deee1-97a4-498e-ad56-379be0ad5414"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": "",
+        "selfLink": ""
+    }
+}
